@@ -2,6 +2,11 @@
 
 A production-ready, full-stack Task Management Web Application built with Node.js, Express, MongoDB, and Vanilla JavaScript. This project demonstrates clean API architecture, responsive design, and full CRUD functionality.
 
+## 🚀 Live Demo & Screenshots
+
+![Task Manager Dashboard](./screenshots/app_dashboard.png)
+*Real screenshot of the application dashboard featuring task creation, filtering, and management.*
+
 ## Features
 - **Create Tasks**: Add new tasks with titles, descriptions, and statuses.
 - **View Tasks**: List all tasks with a modern, responsive grid layout.
@@ -28,6 +33,8 @@ A production-ready, full-stack Task Management Web Application built with Node.j
   index.html      # Main UI structure
   style.css       # Custom responsive styling
   app.js          # Logic & API interaction
+  vercel.json     # Vercel deployment config
+render.yaml       # Render.com deployment config
 ```
 
 ## Setup Instructions
@@ -55,11 +62,23 @@ A production-ready, full-stack Task Management Web Application built with Node.j
    ```bash
    npm start
    ```
-   *Note: If you don't have `nodemon` installed, you can use `node server.js`.*
 
 ### 2. Frontend Setup
 1. Simply open `frontend/index.html` in your web browser.
 2. Ensure the backend server is running on `http://localhost:5000`.
+
+## 🌐 Making it Live (Deployment)
+
+### Backend (Render)
+1. Push this code to GitHub.
+2. Connect your repo to [Render.com](https://render.com).
+3. Use the `render.yaml` file provided for automatic setup.
+4. Add your `MONGO_URI` as an environment variable in Render.
+
+### Frontend (Vercel)
+1. Connect your repo to [Vercel](https://vercel.com).
+2. Set the root directory to `frontend`.
+3. Vercel will automatically use `vercel.json` to handle API routing.
 
 ## API Documentation
 
