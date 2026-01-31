@@ -20,6 +20,11 @@ app.use(cors());
 // Mount routers
 app.use('/api/tasks', require('./routes/tasks'));
 
+// Root route
+app.get('/', (req, res) => {
+    res.send('Task Manager API is running...');
+});
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
