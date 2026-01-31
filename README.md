@@ -7,88 +7,74 @@ A production-ready, full-stack Task Management Web Application built with Node.j
 ![Task Manager Dashboard](./screenshots/app_dashboard.png)
 *Real screenshot of the application dashboard featuring task creation, filtering, and management.*
 
-## Features
-- **Create Tasks**: Add new tasks with titles, descriptions, and statuses.
-- **View Tasks**: List all tasks with a modern, responsive grid layout.
-- **Update Tasks**: Edit task details or change statuses (Pending, In Progress, Completed).
-- **Delete Tasks**: Remove tasks with a confirmation prompt.
-- **Status Filters**: Filter tasks by their current status.
-- **Modern UI**: Clean, professional design with smooth transitions and HSL color palettes.
+> **Live Demo:** [Deploy your own on Vercel/Render](#-making-it-live-deployment)
 
-## Tech Stack
-- **Frontend**: HTML5, Vanilla CSS (Flexbox/Grid), Vanilla JavaScript.
+## 📋 Features
+- **Full CRUD Ops**: Create, Read, Update, and Delete tasks seamlessly.
+- **Dynamic Filtering**: View tasks by status (Pending, In Progress, Completed).
+- **Responsive Design**: Optimized for mobile, tablet, and desktop views.
+- **Smart API Logic**: Automatic switching between local development and production endpoints.
+- **Glassmorphic UI**: Modern aesthetic with smooth transitions and HSL color palettes.
+
+## 💻 Tech Stack
+- **Frontend**: HTML5, Vanilla CSS, Vanilla JavaScript.
 - **Backend**: Node.js, Express.js.
-- **Database**: MongoDB (via Mongoose ODM).
-- **Middleware**: CORS, Dotenv, Express JSON Parser.
+- **Database**: MongoDB (Mongoose ODM).
+- **Hosting**: Prepared for Vercel (Frontend) and Render (Backend).
 
-## Project Structure
-```text
-/backend
-  /config         # Database configuration
-  /controllers    # API logic
-  /models         # Database schemas
-  /routes         # API endpoint definitions
-  server.js       # Main server entry point
-/frontend
-  index.html      # Main UI structure
-  style.css       # Custom responsive styling
-  app.js          # Logic & API interaction
-  vercel.json     # Vercel deployment config
-render.yaml       # Render.com deployment config
-```
-
-## Setup Instructions
+## 🛠️ Local Setup Instructions
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) installed.
-- [MongoDB](https://www.mongodb.com/) installed and running locally OR a MongoDB Atlas URI.
+- **Node.js**: [Download here](https://nodejs.org/)
+- **MongoDB**: Local installation or a [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) account.
 
-### 1. Backend Setup
-1. Navigate to the `backend` folder:
-   ```bash
-   cd backend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Configure environment variables in `.env`:
-   ```text
+### 1. Project Initialization
+```bash
+git clone https://github.com/Spandangowdabc/GLOBAL-TREND.git
+cd GLOBAL-TREND
+```
+
+### 2. Backend Configuration
+1. Enter the backend directory: `cd backend`
+2. Install dependencies: `npm install`
+3. Create a `.env` file in the `backend` folder:
+   ```env
    PORT=5000
-   MONGO_URI=mongodb://localhost:27017/taskmanager
+   MONGO_URI=your_mongodb_connection_string
    NODE_ENV=development
    ```
-4. Start the server:
-   ```bash
-   npm start
-   ```
+4. Start the server: `npm start`
 
-### 2. Frontend Setup
-1. Simply open `frontend/index.html` in your web browser.
-2. Ensure the backend server is running on `http://localhost:5000`.
+### 3. Frontend Execution
+1. Simply open `frontend/index.html` in your browser.
+2. Alternatively, use a local server:
+   ```bash
+   # From the root directory
+   npx serve frontend
+   ```
 
 ## 🌐 Making it Live (Deployment)
 
-### Backend (Render)
-1. Push this code to GitHub.
-2. Connect your repo to [Render.com](https://render.com).
-3. Use the `render.yaml` file provided for automatic setup.
-4. Add your `MONGO_URI` as an environment variable in Render.
+### Backend (Render.com) - RECOMMENDED
+1. Create a "Web Service" on [Render](https://render.com).
+2. Connect your GitHub repository.
+3. Use the following:
+   - **Root Directory**: `backend`
+   - **Build Command**: `npm install`
+   - **Start Command**: `node server.js`
+4. **Environment Variables**: Add `MONGO_URI` with your Atlas string.
 
-### Frontend (Vercel)
-1. Connect your repo to [Vercel](https://vercel.com).
-2. Set the root directory to `frontend`.
-3. Vercel will automatically use `vercel.json` to handle API routing.
+### Frontend (Vercel.com) - RECOMMENDED
+1. Import your repo into [Vercel](https://vercel.com).
+2. Select the `frontend` folder as the **Root Directory**.
+3. Vercel will automatically use the included `vercel.json` to route your API calls correctly.
 
-## API Documentation
+## 🤝 Contributing
+1. Fork the Project.
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`).
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`).
+4. Push to the Branch (`git push origin feature/AmazingFeature`).
+5. Open a Pull Request.
 
-| Method | Endpoint | Description |
-| --- | --- | --- |
-| GET | `/api/tasks` | Get all tasks (supports query `?status=Pending`) |
-| GET | `/api/tasks/:id` | Get a single task by ID |
-| POST | `/api/tasks` | Create a new task |
-| PUT | `/api/tasks/:id` | Update a task |
-| DELETE| `/api/tasks/:id` | Delete a task |
-
-## License
-MIT
+## 📄 License
+Distributed under the MIT License.
