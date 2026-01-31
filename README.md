@@ -30,8 +30,8 @@ A production-ready, full-stack Task Management Web Application built with Node.j
 
 ### 1. Project Initialization
 ```bash
-git clone https://github.com/Spandangowdabc/GLOBAL-TREND.git
-cd GLOBAL-TREND
+git clone https://github.com/SpandanGowdaBC/Full_Stack_Task_Management_Application.git
+cd Full_Stack_Task_Management_Application
 ```
 
 ### 2. Backend Configuration
@@ -80,6 +80,6 @@ cd GLOBAL-TREND
 Distributed under the MIT License.
 
 ## 👤 Author
-**Spandan Gowda**
-- GitHub: [@Spandangowdabc](https://github.com/Spandangowdabc)
-- Project Link: [https://github.com/Spandangowdabc/GLOBAL-TREND](https://github.com/Spandangowdabc/GLOBAL-TREND)
+**Spandan Gowda B C**
+- GitHub: [@SpandanGowdaBC](https://github.com/SpandanGowdaBC)
+- Project Link: [https://github.com/SpandanGowdaBC/Full_Stack_Task_Management_Application](https://github.com/SpandanGowdaBC/Full_Stack_Task_Management_Application)
