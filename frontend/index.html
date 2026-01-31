@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskManager | Professional Task Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task<span>Manager</span></h1>
+            <p>Manage your daily workflow efficiently</p>
+        </header>
+
+        <main>
+            <section class="task-form-section">
+                <form id="task-form">
+                    <div class="form-group">
+                        <input type="text" id="task-title" placeholder="What needs to be done?" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="task-desc" placeholder="Add a description..."></textarea>
+                    </div>
+                    <div class="form-footer">
+                        <select id="task-status">
+                            <option value="Pending">Pending</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+                        <button type="submit" id="submit-btn" class="btn-primary">Add Task</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="filters-section">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="Pending">Pending</button>
+                    <button class="filter-btn" data-filter="In Progress">In Progress</button>
+                    <button class="filter-btn" data-filter="Completed">Completed</button>
+                </div>
+            </section>
+
+            <section class="task-list-section">
+                <div id="task-list" class="task-grid">
+                    <!-- Tasks will be injected here by JavaScript -->
+                    <div class="loader">Loading tasks...</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Edit Task Modal -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Edit Task</h2>
+            <form id="edit-task-form">
+                <input type="hidden" id="edit-task-id">
+                <div class="form-group">
+                    <label for="edit-task-title">Title</label>
+                    <input type="text" id="edit-task-title" required>
+                </div>
+                <div class="form-group">
+                    <label for="edit-task-desc">Description</label>
+                    <textarea id="edit-task-desc"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="edit-task-status">Status</label>
+                    <select id="edit-task-status">
+                        <option value="Pending">Pending</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Update Task</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
