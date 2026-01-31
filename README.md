@@ -7,7 +7,7 @@ A production-ready, full-stack Task Management Web Application built with Node.j
 ![Task Manager Dashboard](./screenshots/app_dashboard.png)
 *Real screenshot of the application dashboard featuring task creation, filtering, and management.*
 
-> **Live Demo:** [Deploy your own on Vercel/Render](#-making-it-live-deployment)
+> **Live Demo:** [https://full-stack-task-management-applicat.vercel.app/](https://full-stack-task-management-applicat.vercel.app/)
 
 ## 📋 Features
 - **Full CRUD Ops**: Create, Read, Update, and Delete tasks seamlessly.
