@@ -78,3 +78,8 @@ cd GLOBAL-TREND
 
 ## 📄 License
 Distributed under the MIT License.
+
+## 👤 Author
+**Spandan Gowda**
+- GitHub: [@Spandangowdabc](https://github.com/Spandangowdabc)
+- Project Link: [https://github.com/Spandangowdabc/GLOBAL-TREND](https://github.com/Spandangowdabc/GLOBAL-TREND)
